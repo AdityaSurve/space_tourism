@@ -5,13 +5,15 @@ import tabImage from "../assets/home/background-home-tablet.jpg";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen p-32 flex justify-start items-center overflow-hidden">
-      <div className="flex flex-col max-w-[40%] h-[40%] z-[1000]">
-        <div className="font-barlowCondensed text-left font-light capitalize text-[22px] tracking-widest text-medium">
+    <div className="h-screen w-screen p-10 md:p-32 flex justify-start items-start mt-16 md:mt-20 lg:mt-0 lg:items-center overflow-hidden">
+      <div className="flex flex-col lg:w-[40%] h-[40%] z-[1000]">
+        <div className="font-barlowCondensed  text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO
         </div>
-        <div className="text-white w-full font-bell text-[150px]">SPACE</div>
-        <div className="w-full text-left font-barlow text-[16px] tracking-widest">
+        <div className="text-white w-full text-center lg:text-left font-bell text-[100px] md:text-[150px]">
+          SPACE
+        </div>
+        <div className="w-full text-center lg:text-left font-barlow text-[12px] md:text-[16px] tracking-widest">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
@@ -20,7 +22,7 @@ const Home = () => {
       </div>
       <Link
         to={"/destination"}
-        className="absolute bottom-24 right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[240px] h-[240px] z-[1000] bg-white justify-center font-bell text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
+        className="absolute bottom-12 right-[27%] md:right-[32%] lg:bottom-24 lg:right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[160px] h-[160px] md:w-[240px] md:h-[240px] z-[1000] bg-white justify-center font-bell text-[20px] md:text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
       >
         EXPLORE
       </Link>
