@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <Link
         to={"/destination"}
-        className="absolute bottom-12 right-[27%] md:right-[32%] lg:bottom-24 lg:right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[160px] h-[160px] md:w-[240px] md:h-[240px] z-[1000] bg-white justify-center font-bell text-[20px] md:text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
+        className="absolute bottom-12 right-[27%] md:bottom-16 md:right-[32%] lg:bottom-24 lg:right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[160px] h-[160px] md:w-[240px] md:h-[240px] z-[1000] bg-white justify-center font-bell text-[20px] md:text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
       >
         EXPLORE
       </Link>
