@@ -64,20 +64,20 @@ const Destination = () => {
               {desc}
             </div>
             <div className="border-b-2 mt-8 w-full border-[#ffffff20] z-[1000]" />
-            <div className="flex mt-8 justify-between w-[90%] lg:w-full">
-              <div className="w-[50%] flex flex-col items-center lg:items-start">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-10 mt-4 md:mt-8 justify-between w-[90%] lg:w-full">
+              <div className="w-full md:w-[50%] flex flex-col items-center lg:items-start">
                 <div className="text-medium font-barlowCondensed text-[8px] md:text-[16px] tracking-widest">
                   AVG. DISTANCE
                 </div>
-                <div className="text-[12px] md:text-[26px] text-white font-bell">
+                <div className="text-[16px] md:text-[26px] text-white font-bell">
                   {distance}
                 </div>
               </div>
-              <div className="w-[50%] flex flex-col items-center lg:items-start">
+              <div className="w-full md:w-[50%] flex flex-col items-center lg:items-start">
                 <div className="text-medium font-barlowCondensed text-[8px] md:text-[16px] tracking-widest">
                   EST. TRAVEL TIME
                 </div>
-                <div className="text-[12px] md:text-[26px] text-white font-bell">
+                <div className="text-[16px] md:text-[26px] text-white font-bell">
                   {travel}
                 </div>
               </div>

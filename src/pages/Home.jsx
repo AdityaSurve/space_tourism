@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="h-screen w-screen px-10 pt-10 overflow-hidden md:p-32 flex justify-start items-start lg:items-center">
       <div className="flex flex-col lg:w-[40%] h-[40%] z-[1000]">
-        <div className="font-barlowCondensed mt-20 md:mt-0 text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
+        <div className="font-barlowCondensed mt-20 md:mt-10 lg:mt-0 text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO
         </div>
         <div className="text-white w-full text-center lg:text-left font-bell text-[100px] md:text-[150px]">
@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <Link
         to={"/destination"}
-        className="absolute bottom-12 right-[27%] md:bottom-16 md:right-[32%] lg:bottom-24 lg:right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[160px] h-[160px] md:w-[240px] md:h-[240px] z-[1000] bg-white justify-center font-bell text-[20px] md:text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
+        className="absolute bottom-12 right-[27%] md:bottom-16 md:right-[32%] lg:bottom-24 lg:right-32 hover:ring-[75px] hover:ring-[#97979730] hover:ring-opacity-[10.36%] rounded-full w-[160px] h-[160px] md:w-[240px] md:h-[240px] z-[1000] bg-white justify-center font-bell text-[20px] md:text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
       >
         EXPLORE
       </Link>
