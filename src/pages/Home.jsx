@@ -6,7 +6,7 @@ import tabImage from "../assets/home/background-home-tablet.jpg";
 const Home = () => {
   return (
     <div className="h-screen w-screen p-32 flex justify-start items-center overflow-hidden">
-      <div className="flex flex-col max-w-[40%] h-[40%] z-[10000]">
+      <div className="flex flex-col max-w-[40%] h-[40%] z-[1000]">
         <div className="font-barlowCondensed text-left font-light capitalize text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO
         </div>
@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <Link
         to={"/destination"}
-        className="absolute bottom-24 right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[240px] h-[240px] z-[10000] bg-white justify-center font-bell text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
+        className="absolute bottom-24 right-32 hover:ring-[50px] hover:ring-[#97979740] hover:ring-opacity-[10.36%] rounded-full w-[240px] h-[240px] z-[1000] bg-white justify-center font-bell text-[28px] text-black items-center flex tracking-widest transition-all duration-300 hover:text-black"
       >
         EXPLORE
       </Link>
