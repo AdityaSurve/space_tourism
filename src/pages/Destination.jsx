@@ -19,32 +19,32 @@ const Destination = () => {
     setTravel(Destinations[0].travel);
   }, []);
   return (
-    <div className="h-screen w-screen py-16 px-32 overflow-hidden">
-      <div className="flex flex-col w-full h-[80%] mt-28">
-        <div className="w-full h-auto py-2 text-left font-barlowCondensed z-[1000]  text-[24px] tracking-widest">
+    <div className="h-screen w-screen py-28 lg:py-16 lg:px-32 overflow-hidden">
+      <div className="flex flex-col w-full justify-center items-center h-[80] mt-0 lg:mt-28">
+        <div className="w-screen lg:w-full h-auto py-0 md:py-2 ms-0 md:ms-20 text-center md:text-left font-barlowCondensed z-[1000] text-[16px] md:text-[20px] lg:text-[24px] tracking-widest">
           <span className="font-bold text-gray-600 me-4">01</span>PICK YOUR
           DESTINATION
         </div>
-        <div className="w-full flex z-[1000] gap-20 mt-5">
+        <div className="w-[50%] lg:w-full flex lg:flex-row flex-col justify-center lg:justify-start z-[1000] gap-10 lg:gap-20 mt-5">
           <img
             src={img}
             alt=""
-            className="h-[400px] w-[400px] mt-5 object-contain mx-20"
+            className="h-[125px] w-[125px] md:h-[250px] md:w-[250px] lg:h-[400px] lg:w-[400px] lg:mt-5 object-contain mx-[2.5rem] md:mx-[4.2rem] lg:mx-20"
           />
-          <div className="flex flex-col  w-[40%]">
-            <div className="h-[32px] text-[16px] tracking-widest  flex gap-10">
+          <div className="flex flex-col items-center lg:items-start w-full lg:w-[40%]">
+            <div className="h-[32px] text-[16px] tracking-widest flex gap-5 md:gap-10">
               {Destinations.map((link) => {
                 return activeLink === link.id ? (
                   <div
                     key={link.id}
-                    className="font-barlowCondensed hover:cursor-pointer text-[14px] border-b-2 border-white"
+                    className="font-barlowCondensed hover:cursor-pointer text-[10px] md:text-[14px] border-b-2 border-white"
                   >
                     {link.name}
                   </div>
                 ) : (
                   <div
                     key={link.id}
-                    className="hover:border-b-2 hover:cursor-pointer hover:border-[#ffffff40] font-barlowCondensed text-[14px]"
+                    className="hover:border-b-2 hover:cursor-pointer hover:border-[#ffffff40] font-barlowCondensed text-[10px] md:text-[14px]"
                     onClick={() => {
                       setActiveLink(link.id);
                       setName(link.name);
@@ -59,25 +59,27 @@ const Destination = () => {
                 );
               })}
             </div>
-            <div className="font-bell text-[100px]">{name}</div>
-            <div className="font-barlow text-[16px] tracking-widest">
+            <div className="font-bell text-[50px] md:text-[100px]">{name}</div>
+            <div className="font-barlow text-[8px] md:text-[16px] text-center lg:text-left tracking-widest">
               {desc}
             </div>
-            <div className="border-b-2 mt-8 border-[#ffffff20]" />
-            <div className="flex mt-8 justify-between w-full">
-              <div className="w-[50%]">
-                <div className="text-medium font-barlowCondensed text-[16px] tracking-widest">
+            <div className="border-b-2 mt-8 w-full border-[#ffffff20] z-[1000]" />
+            <div className="flex mt-8 justify-between w-[90%] lg:w-full">
+              <div className="w-[50%] flex flex-col items-center lg:items-start">
+                <div className="text-medium font-barlowCondensed text-[8px] md:text-[16px] tracking-widest">
                   AVG. DISTANCE
                 </div>
-                <div className="text-[26px] text-white font-bell">
+                <div className="text-[12px] md:text-[26px] text-white font-bell">
                   {distance}
                 </div>
               </div>
-              <div className="w-[50%]">
-                <div className="text-medium font-barlowCondensed text-[16px] tracking-widest">
+              <div className="w-[50%] flex flex-col items-center lg:items-start">
+                <div className="text-medium font-barlowCondensed text-[8px] md:text-[16px] tracking-widest">
                   EST. TRAVEL TIME
                 </div>
-                <div className="text-[26px] text-white font-bell">{travel}</div>
+                <div className="text-[12px] md:text-[26px] text-white font-bell">
+                  {travel}
+                </div>
               </div>
             </div>
           </div>

@@ -5,9 +5,9 @@ import tabImage from "../assets/home/background-home-tablet.jpg";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen p-10 md:p-32 flex justify-start items-start mt-16 md:mt-20 lg:mt-0 lg:items-center overflow-hidden">
+    <div className="h-screen w-screen px-10 pt-10 overflow-hidden md:p-32 flex justify-start items-start lg:items-center">
       <div className="flex flex-col lg:w-[40%] h-[40%] z-[1000]">
-        <div className="font-barlowCondensed  text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
+        <div className="font-barlowCondensed mt-20 md:mt-0 text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO
         </div>
         <div className="text-white w-full text-center lg:text-left font-bell text-[100px] md:text-[150px]">
