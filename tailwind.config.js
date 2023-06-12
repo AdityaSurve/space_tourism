@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         bell: ["Bellefair", "serif"],
         barlow: ["Barlow", "sans-serif"],
+        barlowCondensed: ["Barlow Condensed", "sans-serif"],
       },
     },
   },
