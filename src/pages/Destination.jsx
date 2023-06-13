@@ -3,6 +3,7 @@ import desktopImage from "../assets/destination/background-destination-desktop.j
 import mobileImage from "../assets/destination/background-destination-mobile.jpg";
 import tabImage from "../assets/destination/background-destination-tablet.jpg";
 import Destinations from "../data/Destinations";
+import { motion } from "framer-motion";
 const Destination = () => {
   const [activeLink, setActiveLink] = useState(10);
   const [name, setName] = useState("");
@@ -19,7 +20,12 @@ const Destination = () => {
     setTravel(Destinations[0].travel);
   }, []);
   return (
-    <div className="h-screen w-screen py-28 lg:py-16 lg:px-32 overflow-hidden">
+    <motion.div
+      className="h-screen w-screen py-28 lg:py-16 lg:px-32 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="flex flex-col w-full justify-center items-center h-[80] mt-0 lg:mt-12">
         <div className="w-screen lg:w-full h-auto py-0 md:py-2 ms-0 md:ms-20 text-center md:text-left font-barlowCondensed z-[1000] text-[16px] md:text-[20px] lg:text-[24px] tracking-widest">
           <span className="font-bold text-gray-600 me-4">01</span>PICK YOUR
@@ -85,22 +91,31 @@ const Destination = () => {
           </div>
         </div>
       </div>
-      <img
+      <motion.img
         src={desktopImage}
         alt=""
         className="hidden lg:block fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={tabImage}
         alt=""
         className="hidden md:block lg:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={mobileImage}
         alt=""
         className="sm:block md:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-    </div>
+    </motion.div>
   );
 };
 

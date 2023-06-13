@@ -2,6 +2,7 @@ import desktopImage from "../assets/crew/background-crew-desktop.jpg";
 import mobileImage from "../assets/crew/background-crew-mobile.jpg";
 import tabImage from "../assets/crew/background-crew-tablet.jpg";
 import Crews from "../data/Crew";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 const Crew = () => {
   const [activeLink, setActiveLink] = useState(21);
@@ -34,7 +35,12 @@ const Crew = () => {
   }, [activeLink]);
 
   return (
-    <div className="relative overflow-hidden">
+    <motion.div
+      className="relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="h-screen w-screen flex justify-center items-center">
         <div className="h-full w-screen tracking-widest bg-[#00000050] backdrop-filter backdrop-blur-sm z-[100] flex flex-col justify-start lg:justify-center items-start p-16 lg:p-32">
           <div className="mt-5 md:mt-20 w-full md:w-auto flex justify-center">
@@ -88,22 +94,31 @@ const Crew = () => {
           className="hidden md:block h-[40%] lg:h-[80%] w-full object-contain absolute bottom-0 left-0 lg:left-[27%]  z-[10000]"
         />
       </div>
-      <img
+      <motion.img
         src={desktopImage}
         alt=""
         className="hidden lg:block fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={tabImage}
         alt=""
         className="hidden md:block lg:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={mobileImage}
         alt=""
         className="sm:block md:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-    </div>
+    </motion.div>
   );
 };
 

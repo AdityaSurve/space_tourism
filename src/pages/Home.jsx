@@ -2,10 +2,16 @@ import { Link } from "react-router-dom";
 import desktopImage from "../assets/home/background-home-desktop.jpg";
 import mobileImage from "../assets/home/background-home-mobile.jpg";
 import tabImage from "../assets/home/background-home-tablet.jpg";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen px-10 pt-10 lg:pt-5 overflow-hidden md:p-32  flex justify-start items-start lg:items-center">
+    <motion.div
+      className="h-screen w-screen px-10 pt-10 lg:pt-5 overflow-hidden md:p-32  flex justify-start items-start lg:items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="flex flex-col lg:w-[40%] h-[40%] z-[1000]">
         <div className="font-barlowCondensed mt-20 md:mt-10 lg:mt-0 text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO
@@ -26,22 +32,31 @@ const Home = () => {
       >
         EXPLORE
       </Link>
-      <img
+      <motion.img
         src={desktopImage}
         alt=""
         className="hidden lg:block fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={tabImage}
         alt=""
         className="hidden md:block lg:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={mobileImage}
         alt=""
         className="sm:block md:hidden fixed z-0 top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-    </div>
+    </motion.div>
   );
 };
 

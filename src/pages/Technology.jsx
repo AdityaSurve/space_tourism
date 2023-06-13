@@ -3,6 +3,7 @@ import mobileImage from "../assets/technology/background-technology-mobile.jpg";
 import tabImage from "../assets/technology/background-technology-tablet.jpg";
 import Tech from "../data/Technology";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 const Technology = () => {
   const [activeLink, setActiveLink] = useState(31);
   const [name, setName] = useState("");
@@ -31,7 +32,12 @@ const Technology = () => {
   }, [activeLink]);
 
   return (
-    <div className="h-screen w-screen py-[120px] lg:px-32 overflow-hidden">
+    <motion.div
+      className="h-screen w-screen py-[120px] lg:px-32 overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="flex flex-col w-full lg:w-[60%] h-full justify-center">
         <div className="text-center tracking-widest md:text-left px-5 md:px-8 lg:px-0  text-[16px] md:text-[20px] lg:text-[24px] font-barlowCondensed">
           <span className="font-bold text-gray-600 me-4">03</span>
@@ -42,7 +48,7 @@ const Technology = () => {
           alt=""
           className="lg:hidden z-[1000] h-[400px] w-full object-contain mt-10  right-0 bottom-16"
         />
-        <div className="flex flex-col items-center lg:items-start h-full px-16 lg:px-0 w-full lg:w-[80%] mt-20 md:mt-[180px] lg:mt-20 lg:ms-[180px] tracking-widest">
+        <div className="flex flex-col items-center lg:items-start h-full px-16 lg:px-0 w-full lg:w-[80%] mt-20 md:mt-[180px] lg:mt-32 lg:ms-[180px] tracking-widest">
           <div className="font-barlowCondensed text-center lg:text-left text-medium text-[12px] md:text-[18px]">
             THE TERMINOLOGY ...
           </div>
@@ -74,27 +80,39 @@ const Technology = () => {
           );
         })}
       </div>
-      <img
+      <motion.img
         src={imgPortrait}
         alt=""
         className="hidden lg:block z-[1000] fixed w-[30%] object-contain  right-0 bottom-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={desktopImage}
         alt=""
         className="hidden lg:block fixed z-[-100] top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={tabImage}
         alt=""
         className="hidden md:block lg:hidden fixed z-[-100] top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-      <img
+      <motion.img
         src={mobileImage}
         alt=""
         className="sm:block md:hidden fixed z-[-100] top-0 left-0 h-full w-full object-cover object-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
-    </div>
+    </motion.div>
   );
 };
 
