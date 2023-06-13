@@ -5,7 +5,7 @@ import tabImage from "../assets/home/background-home-tablet.jpg";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen px-10 pt-10 overflow-hidden md:p-32 flex justify-start items-start lg:items-center">
+    <div className="h-screen w-screen px-10 pt-10 lg:pt-5 overflow-hidden md:p-32  flex justify-start items-start lg:items-center">
       <div className="flex flex-col lg:w-[40%] h-[40%] z-[1000]">
         <div className="font-barlowCondensed mt-20 md:mt-10 lg:mt-0 text-center lg:text-left font-light capitalize text-[16px] md:text-[22px] tracking-widest text-medium">
           SO, YOU WANT TO TRAVEL TO

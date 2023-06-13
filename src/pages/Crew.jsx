@@ -59,7 +59,7 @@ const Crew = () => {
               {desc}
             </div>
           </div>
-          <div className="fixed left-[34%] bottom-[42%] md:left-[42%] md:bottom-[46%] lg:left-32 lg:bottom-28 flex gap-5 mt-32">
+          <div className="fixed left-[34%] bottom-[42%] md:left-[42%] md:bottom-[46%] lg:left-32 lg:bottom-20 flex gap-5 mt-32">
             {Crews.map((member) => {
               return activeLink === member.id ? (
                 <div

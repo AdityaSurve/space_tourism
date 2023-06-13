@@ -7,7 +7,8 @@ const Technology = () => {
   const [activeLink, setActiveLink] = useState(31);
   const [name, setName] = useState("");
   const [desc, setDesc] = useState("");
-  const [img, setImg] = useState("");
+  const [imgPortrait, setImgPortrait] = useState("");
+  const [imgLandscape, setImgLandscape] = useState("");
   useEffect(() => {
     const timer = setInterval(() => {
       const currentIndex = Tech.findIndex((member) => member.id === activeLink);
@@ -16,7 +17,8 @@ const Technology = () => {
       setActiveLink(nextMember.id);
       setName(nextMember.name);
       setDesc(nextMember.desc);
-      setImg(nextMember.imgURL);
+      setImgPortrait(nextMember.imgPortrait);
+      setImgLandscape(nextMember.imgLandscape);
     }, 3000);
     return () => clearInterval(timer);
   }, [activeLink]);
@@ -24,38 +26,46 @@ const Technology = () => {
     const member = Tech.find((member) => member.id === activeLink);
     setName(member.name);
     setDesc(member.desc);
-    setImg(member.imgURL);
+    setImgPortrait(member.imgPortrait);
+    setImgLandscape(member.imgLandscape);
   }, [activeLink]);
 
   return (
-    <div className="h-screen w-screen py-[150px] px-32 overflow-hidden">
-      <div className="flex flex-col w-[60%] h-full justify-center">
-        <div className="text-left text-[24px] font-barlowCondensed">
-          <span className="font-bold text-gray-600 me-4">02</span>
+    <div className="h-screen w-screen py-[120px] lg:px-32 overflow-hidden">
+      <div className="flex flex-col w-full lg:w-[60%] h-full justify-center">
+        <div className="text-left px-32 lg:px-0 text-[24px] font-barlowCondensed">
+          <span className="font-bold text-gray-600 me-4">03</span>
           MEET YOUR CREW
         </div>
-        <div className="flex flex-col h-full w-[80%] mt-20 ms-[180px] tracking-widest">
-          <div className="font-barlowCondensed text-medium text-[16px]">
+        <img
+          src={imgLandscape}
+          alt=""
+          className="lg:hidden z-[1000] h-[400px] w-full object-contain mt-10  right-0 bottom-16"
+        />
+        <div className="flex flex-col items-center lg:items-start h-full px-16 lg:px-0 w-full lg:w-[80%] mt-[180px] lg:mt-20 lg:ms-[180px] tracking-widest">
+          <div className="font-barlowCondensed text-center lg:text-left text-medium text-[18px]">
             THE TERMINOLOGY ...
           </div>
-          <div className="font-bell text-[60px]">{name}</div>
-          <div className="text-medium text-left text-[14px] w-[70%] font-barlow leading-7">
+          <div className=" font-bell text-center lg:text-left text-[50px]">
+            {name}
+          </div>
+          <div className="text-medium text-center lg:text-left text-[14px] w-[80%] lg:w-full font-barlow leading-7">
             {desc}
           </div>
         </div>
       </div>
-      <div className="fixed bottom-[25%] flex flex-col gap-5">
+      <div className="fixed left-[31%] bottom-[40%] lg:left-[10%] lg:bottom-[20%] flex lg:flex-col gap-5">
         {Tech.map((member) => {
           return activeLink === member.id ? (
             <div
-              className="h-[80px] w-[80px] flex justify-center items-center bg-white border-2 border-medium text-black rounded-full"
+              className="hover:cursor-pointer h-[80px] w-[80px] flex justify-center items-center bg-white border-2 border-medium text-black rounded-full"
               key={member.id}
             >
               {member.id - 30}
             </div>
           ) : (
             <div
-              className="h-[80px] w-[80px] flex justify-center items-center bg-black hover:border-white border-2 border-[#ffffff30] text-white rounded-full"
+              className="hover:cursor-pointer h-[80px] w-[80px] flex justify-center items-center bg-[#00000010] hover:border-white border-2 border-[#ffffff30] text-white rounded-full"
               key={member.id}
               onClick={() => setActiveLink(member.id)}
             >
@@ -65,9 +75,9 @@ const Technology = () => {
         })}
       </div>
       <img
-        src={img}
+        src={imgPortrait}
         alt=""
-        className="z-[1000] fixed h-[500px] w-[500px] object-fill right-0 bottom-16"
+        className="hidden lg:block z-[1000] fixed w-[30%] object-contain  right-0 bottom-16"
       />
       <img
         src={desktopImage}

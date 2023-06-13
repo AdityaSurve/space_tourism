@@ -20,7 +20,7 @@ const Destination = () => {
   }, []);
   return (
     <div className="h-screen w-screen py-28 lg:py-16 lg:px-32 overflow-hidden">
-      <div className="flex flex-col w-full justify-center items-center h-[80] mt-0 lg:mt-28">
+      <div className="flex flex-col w-full justify-center items-center h-[80] mt-0 lg:mt-12">
         <div className="w-screen lg:w-full h-auto py-0 md:py-2 ms-0 md:ms-20 text-center md:text-left font-barlowCondensed z-[1000] text-[16px] md:text-[20px] lg:text-[24px] tracking-widest">
           <span className="font-bold text-gray-600 me-4">01</span>PICK YOUR
           DESTINATION
