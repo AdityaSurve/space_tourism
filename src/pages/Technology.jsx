@@ -33,7 +33,7 @@ const Technology = () => {
 
   return (
     <motion.div
-      className="h-screen w-screen py-[120px] lg:px-32 overflow-hidden"
+      className="h-screen text-white w-screen py-[120px] lg:px-32 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

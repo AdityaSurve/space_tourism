@@ -21,7 +21,7 @@ const Destination = () => {
   }, []);
   return (
     <motion.div
-      className="h-screen w-screen py-28 lg:py-16 lg:px-32 overflow-hidden"
+      className="h-screen text-white w-screen py-28 lg:py-16 lg:px-32 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

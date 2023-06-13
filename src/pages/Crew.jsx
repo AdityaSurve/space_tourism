@@ -36,7 +36,7 @@ const Crew = () => {
 
   return (
     <motion.div
-      className="relative overflow-hidden"
+      className="relative text-white overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

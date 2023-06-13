@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <motion.div
-      className="h-screen w-screen px-10 pt-10 lg:pt-5 overflow-hidden md:p-32  flex justify-start items-start lg:items-center"
+      className="h-screen text-white w-screen px-10 pt-10 lg:pt-5 overflow-hidden md:p-32  flex justify-start items-start lg:items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
