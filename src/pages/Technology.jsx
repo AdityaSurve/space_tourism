@@ -33,39 +33,39 @@ const Technology = () => {
   return (
     <div className="h-screen w-screen py-[120px] lg:px-32 overflow-hidden">
       <div className="flex flex-col w-full lg:w-[60%] h-full justify-center">
-        <div className="text-left px-32 lg:px-0 text-[24px] font-barlowCondensed">
+        <div className="text-center tracking-widest md:text-left px-5 md:px-8 lg:px-0  text-[16px] md:text-[20px] lg:text-[24px] font-barlowCondensed">
           <span className="font-bold text-gray-600 me-4">03</span>
-          MEET YOUR CREW
+          SPACE LAUNCH 101
         </div>
         <img
           src={imgLandscape}
           alt=""
           className="lg:hidden z-[1000] h-[400px] w-full object-contain mt-10  right-0 bottom-16"
         />
-        <div className="flex flex-col items-center lg:items-start h-full px-16 lg:px-0 w-full lg:w-[80%] mt-[180px] lg:mt-20 lg:ms-[180px] tracking-widest">
-          <div className="font-barlowCondensed text-center lg:text-left text-medium text-[18px]">
+        <div className="flex flex-col items-center lg:items-start h-full px-16 lg:px-0 w-full lg:w-[80%] mt-20 md:mt-[180px] lg:mt-20 lg:ms-[180px] tracking-widest">
+          <div className="font-barlowCondensed text-center lg:text-left text-medium text-[12px] md:text-[18px]">
             THE TERMINOLOGY ...
           </div>
-          <div className=" font-bell text-center lg:text-left text-[50px]">
+          <div className=" font-bell text-center lg:text-left text-[25px] md:text-[50px]">
             {name}
           </div>
-          <div className="text-medium text-center lg:text-left text-[14px] w-[80%] lg:w-full font-barlow leading-7">
+          <div className="text-medium text-center mt-5 md:mt-0 lg:text-left text-[9px] md:text-[14px] w-full md:w-[80%] lg:w-full font-barlow leading-5 md:leading-7">
             {desc}
           </div>
         </div>
       </div>
-      <div className="fixed left-[31%] bottom-[40%] lg:left-[10%] lg:bottom-[20%] flex lg:flex-col gap-5">
+      <div className="fixed left-[26%] bottom-[46%] md:left-[31%] md:bottom-[40%] lg:left-[10%] lg:bottom-[20%] flex lg:flex-col gap-5">
         {Tech.map((member) => {
           return activeLink === member.id ? (
             <div
-              className="hover:cursor-pointer h-[80px] w-[80px] flex justify-center items-center bg-white border-2 border-medium text-black rounded-full"
+              className="hover:cursor-pointer font-bell h-[45px] w-[45px] md:h-[80px] md:w-[80px] flex justify-center items-center bg-white border-2 border-medium text-black rounded-full"
               key={member.id}
             >
               {member.id - 30}
             </div>
           ) : (
             <div
-              className="hover:cursor-pointer h-[80px] w-[80px] flex justify-center items-center bg-[#00000010] hover:border-white border-2 border-[#ffffff30] text-white rounded-full"
+              className="hover:cursor-pointer font-bell h-[45px] w-[45px] md:h-[80px] md:w-[80px] flex justify-center items-center bg-[#00000010] hover:border-white border-2 border-[#ffffff30] text-white rounded-full"
               key={member.id}
               onClick={() => setActiveLink(member.id)}
             >
